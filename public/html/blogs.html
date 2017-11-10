@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>Archived Blogs</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../css/blogs.css">
+  <link rel="icon" href="../css/resources/chicken.png">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Raleway:400i|Annie+Use+Your+Telescope" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+
+
+  <script type="text/javascript">
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      // document.getElementById("main").style.marginLeft = "250px";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      // document.getElementById("main").style.marginLeft = "0";
+      document.body.style.backgroundColor = "white";
+    }
+  </script>
+</head>
+
+<img class="logo" src="../css/resources/PeachFlower.png" alt="Dreaming of a Farmhome" />
+
+<form class="search">
+  <p class="refine">Keyword Search</p>
+  <input class="form-control" type="text" placeholder="Search" ng-model="main.search">
+  <button class="btn btn-md clearBtn" ng-click="main.clearSearch()">Clear</button>
+</form>
+
+<div class="catDropDown">
+  <p class="catLbl">Choose a Catagory</p>
+  <select class="form-control" ng-model="main.search">
+  <option value = " " default selected>All</option>
+  <option >Life</option>
+  <option >Chickens</option>
+  <option >Food</option>
+  <option >Faith</option>
+</select>
+
+</div>
+
+<body ng-controller="MainCtrl as main">
+
+  <!-- <h1>{{ main.greeting }}</h1> -->
+
+  <!-- This is the div that holds the blogs on the page -->
+  <div class="flex">
+    <!-- <div class="blog" ng-repeat="blog in main.newBlogs | orderBy: 'date': false| filter: main.search"> -->
+    <div class="blog" dir-paginate="blog in main.newBlogs | orderBy: 'date': false| filter: main.search | itemsPerPage: 30">
+
+      <a ng-click="main.setId(blog)" data-toggle="modal" data-target="#blogModal">
+        <ul class="blogList">
+          <li class="blogTitle">{{ blog.name }}</li>
+          <li> <img class="thumbnail" ng-src="{{ blog.image }}" /></li>
+          <li class="blogDesc"> {{ blog.description }}</li>
+          <!-- <li> {{ blog.textBody }}</li> -->
+          <!-- <li> {{ blog.category }}</li> -->
+        </ul>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Blog Modal -->
+  <div class="modal fade" id="blogModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-admin" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">BACK</span></button>
+
+          <h4 class="modal-title poiret" id="myModalLabel">{{ main.id.name }}</h4>
+        </div>
+        <div class="modal-body">
+
+          <ul class="modalList">
+
+            <li>
+              <img class="modalImage" ng-src="{{ main.id.image }}">
+            </li>
+            <!-- <li> <strong>Description: </strong> <br/>{{ main.id.description }}</li> -->
+            <li>
+              <p class="blogBody">{{ main.id.textBody }}</p>
+            </li>
+            <li class="modalRef">{{ main.id._id }}</li>
+
+          </ul>
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- This is the slide menu -->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/">Home</a>
+    <a href="/about">About Me</a>
+    <!-- <h2 class="menuCats">Categories:</h2>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Life')" onclick="closeNav()">Life</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Chickens')" onclick="closeNav()">Chickens</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Food')" onclick="closeNav()">Food</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Faith')" onclick="closeNav()">Faith</a> -->
+  </div>
+
+  <!-- This is the hamburger menu button that opens the slide menu -->
+  <button type="button" class="btn btn-default btn-lg openMenu" onclick="openNav()">
+    <span class = "glyphicon glyphicon-menu-hamburger" aria-hidden = "true"></span>
+  </button>
+
+  <div class="invControlsWrapper">
+    <dir-pagination-controls class="invControls" max-size="5" direction-links="true" boundary-links="true" auto-hide="false" ng-click="main.backToTop()"></dir-pagination-controls>
+  </div>
+
+
+  <script type="text/javascript" src="../js/dirPagination.js"></script>
+  <script type="text/javascript" src="../js/module.js"></script>
+  <script type="text/javascript" src="../js/myScripts.js"></script>
+  <script type="text/javascript" src="../js/lisaFactory.js"></script>
+</body>
+
+</html>

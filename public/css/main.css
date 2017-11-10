@@ -1,0 +1,401 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background: white;
+  /*background: #e0e2dd;*/
+  /*background: #fdc3b3;*/
+  position: relative;
+}
+
+.landing {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  /*width: auto;*/
+  width: 100vw;
+  /*background-image: url(./resources/farm.jpg);*/
+  background-image: url(./resources/setaside.jpg);
+  background-size: cover;
+  background-position: center;
+  animation: hide 15s ease-in forwards;
+  background-attachment: fixed;
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1.0;
+    /*visibility: visible;*/
+  }
+  100% {
+    opacity: 0;
+    /*visibility: hidden;*/
+  }
+}
+
+.cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.3);
+  animation: hide 10s ease-in forwards;
+}
+
+
+/*h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: red;
+  z-index: -1;
+}*/
+
+.quote {
+  position: relative;
+  /*font-family: 'Annie Use Your Telescope', cursive;*/
+  font-family: 'Architects Daughter', cursive;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 2px 2px DimGray, -2px -2px DimGray;
+  animation: hide 10s ease-in forwards;
+}
+
+.one {
+  font-size: 2.5em;
+  top: 5%;
+  left: 5%;
+  /*transform: translate(-50%, -50%);*/
+}
+
+.two {
+  font-size: 2.5em;
+  top: 5%;
+  left: 6%;
+  /*transform: translate(-50%, -50%);*/
+}
+
+.three {
+  font-size: 2.5em;
+  top: 5%;
+  left: 25%;
+  /*text-shadow: .5px .5px white, -.5px -.5px white;*/
+  /*transform: translate(-50%, -50%);*/
+}
+
+.logo {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 10px;
+  /*height: 200px;*/
+  width: auto;
+  /*border: 2px solid #f3b2a6;*/
+}
+
+.logoName {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  /*font-family: 'Annie Use Your Telescope', cursive;*/
+  font-family: 'Architects Daughter', cursive;
+  font-weight: bold;
+  color: black
+}
+
+
+/*This is to style the slide menu*/
+
+
+/*Style the hamburger button that open side slide menu*/
+
+.openMenu {
+  position: absolute;
+  top: 5%;
+  left: 90%;
+  /*color: white;*/
+  /*color: black;*/
+  color: grey;
+  font-size: 2.5em;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  /*background-color: transparent;*/
+  /*border: 3px solid rgba(0, 0, 0, 0.5);*/
+  z-index: 1;
+  animation: show 15s ease-in forwards;
+}
+
+
+/*This is the hamburger menu for the about me page*/
+
+.aboutMenu {
+  position: absolute;
+  top: 5%;
+  left: 90%;
+  /*color: white;*/
+  /*color: black;*/
+  color: grey;
+  font-size: 2.5em;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  /*background-color: transparent;*/
+  /*border: 3px solid rgba(0, 0, 0, 0.5);*/
+  z-index: 1;
+}
+
+.openMenu:focus {
+  outline: 0;
+  background-color: white;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    /*visibility: visible;*/
+  }
+  100% {
+    opacity: 1.0;
+    /*visibility: hidden;*/
+  }
+}
+
+
+/*Turns hamburger white and background black when hover*/
+
+.openMenu:hover {
+  color: white;
+  background-color: black;
+}
+
+
+/* The side navigation menu */
+
+.sidenav {
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 2;
+  /* Stay on top */
+  top: 0;
+  left: 0;
+  /*background-color: white;*/
+  /*color: black;*/
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
+}
+
+
+/* The navigation menu links */
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  /*color: #818181;*/
+  color: white;
+  display: block;
+  transition: 0.3s
+}
+
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover, .offcanvas a:focus {
+  /*color: #f1f1f1;*/
+  /*color: #818181;*/
+  color: black;
+}
+
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+/*This is for the form on the add blog page*/
+
+.addBlogForm {
+  position: absolute;
+  height: 80%;
+  width: 60%;
+  top: 30%;
+  left: 10%;
+  margin-bottom: 10%;
+  padding-bottom: 10%;
+}
+
+
+/*Styling the blogs on the main page*/
+
+.mainPageBlogs {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  top: 125%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  text-align: center;
+}
+
+.blogList {
+  position: relative;
+  list-style: none;
+  padding: 2%;
+}
+
+.blogList li {
+  padding: 10px;
+}
+
+.blogImage {
+  position: relative;
+  height: auto;
+  width: 500px;
+  border: 2px solid black;
+  border-radius: 7px;
+  box-shadow: 5px 5px 2px grey;
+}
+
+.blogTitle {
+  /*font-family: 'Annie Use Your Telescope', cursive;*/
+  /*font-family: 'Amatic SC', cursive;*/
+  font-family: 'Architects Daughter', cursive;
+  /*font-size: 1.75em;*/
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.blogBody {
+  margin-bottom: 15px;
+  font-family: 'Raleway', sans-serif;
+  text-align: left;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-indent: 5%;
+}
+
+.blogDesc {
+  /*font-family: 'Amatic SC', cursive;*/
+  /*font-family: 'Annie Use Your Telescope', cursive;*/
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1.75em;
+}
+
+.addBlogButton {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+.addingBlogs {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+
+.editForm {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+}
+
+.removeBlogs {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+}
+
+
+/*This is all for the about me page*/
+
+p {
+  position: relative;
+  left: 2%;
+  font-size: 2em;
+  /*font-family: 'Amatic SC', cursive;*/
+  font-family: 'Architects Daughter', cursive;
+  width: 90%;
+  margin: auto;
+}
+
+.sinner {
+  top: 50%;
+}
+
+.aboutMe {
+  top: 52%;
+}
+
+.paragraphOne {
+  top: 54%;
+}
+
+.paragraphTwo {
+  top: 56%;
+}
+
+.paragraphThree {
+  top: 58%;
+}
+
+.paragraphFour {
+  top: 60%;
+}
+
+.paragraphFive {
+  top: 62%;
+}
+
+.paragraphSix {
+  top: 64%;
+}
+
+.paragraphSeven {
+  top: 66%;
+}
+
+.paragraphEight {
+  top: 68%;
+  margin-bottom: 10%;
+}
+
+
+/*styling pagination controls*/
+
+.invControlsWrapper {
+  position: relative;
+  width: 100vw;
+  height: auto;
+  /*top: 98vh;
+  left: 50%;
+  transform: translate(-50%);*/
+}
+
+.invControls {
+  position: absolute;
+  left: 50%;
+  /*transform: translate(-50%);*/
+}

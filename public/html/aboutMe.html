@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>About Me</title>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/main.css" type="text/css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Raleway:400i" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Raleway:400i|Annie+Use+Your+Telescope" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+  <link rel="icon" href="../css/resources/chicken.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+
+  <script type="text/javascript">
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      // document.getElementById("main").style.marginLeft = "250px";
+      // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      // document.getElementById("main").style.marginLeft = "0";
+      // document.body.style.backgroundColor = "white";
+    }
+  </script>
+
+</head>
+
+<body ng-controller="MainCtrl as main">
+
+  <img class="logo" src="../css/resources/PeachFlower.png" alt="Dreaming of a Farmhome" />
+
+  <!-- This is the slide menu -->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/">Home</a>
+    <a href="/blogs">Blogs</a>
+  </div>
+
+  <!-- This is the hamburger menu button that opens the slide menu -->
+  <button type="button" class="btn btn-default btn-lg aboutMenu" onclick="openNav()">
+      <span class = "glyphicon glyphicon-menu-hamburger" aria-hidden = "true"></span>
+    </button>
+
+
+  <p class="sinner">
+    I’m a sinner.
+  </p>
+  <p class="aboutMe">
+    Strange first sentence perhaps, but that is what kept jumping to the front of my mind as I pondered how to write this “About Me” page.
+  </p>
+  <p class="paragraphOne">
+    I want my blog to be brutally honest, fun, helpful and awesome (who wouldn’t?!), so I might as well start with honesty. I’m a sinner. I’m forgiven. I’m loved. I’m saved by God’s grace and no other reason. Certainly not because of anything I’ve done.
+  </p>
+
+  <p class="paragraphTwo">
+    I’m also a wife, a mother of three boys (#outnumbered), a sister, a daughter and a friend. I adore animals; dogs, cats, chickens, cows and even my son’s pet gecko (my affection for the gecko could easily be a blog post all of its own… I mean, I have always
+    known I’m an animal lover – but a gecko? Yeah… I’m ridiculously attached to the little guy.) Cooking, coffee and good sour beer (an oxymoron if you ask my husband) are on the top of my list of things I enjoy.
+  </p>
+
+  <p class="paragraphThree">
+    I love being a wife. I fell in love with my husband at 17 and never looked back. I thank God daily for blessing me with him. People say marriage is hard, but I kind of disagree with that – life is hard, and marriage gives you someone to go through the
+    tough times with. Sometimes marriage has bumps, because marriage consists of two imperfect people living life together, but with God in the mix, even the bumps are used for good.
+  </p>
+
+  <p class="paragraphFour">
+    I know it might sound cliché, but I was totally meant to be a mom. Growing up I’m not sure I would have said that… I mean, I didn’t dislike kids, and I always wanted to have children, but I wasn’t baby-crazy, or one to go play with younger kids for hours
+    on end (my sister was “that” girl!). And, before I had kids I thought I wanted a boy and then a couple of girls – so my daughters could have an older brother. I was so wrong… I’m a mom of boys. Totally. Completely. 100%. Mom of boys. Our home is full
+    of farts, Nerf guns, Legos, fake bugs and baseball stuff; and I wouldn’t have it any other way. When we found out that we were having “boy number three” I had so many people say to me “oh, I hope you’re okay with that… were you hoping for a girl?”
+    “A girl?! I’d have no clue what to do with a girl!” So yeah, I love being a mom, I love being outnumbered, I wouldn’t change it for the world.
+  </p>
+
+  <p class="paragraphFive">
+    I’m pretty sure, that as a child, I completely baffled my parents, neither one of them are “animal people”. Don’t get me wrong, they like animals, but neither of them “needed” pets in their lives. I, on the other hand, NEEDED pets. All the pets. Any kind
+    of pet. As many as they’d let me have. Dogs. Hamsters. Fish. Guinea Pigs. Ducks. Cats. I even tried to hatch a chicken egg under my bed in a shoe box when I was about 7 years old. I took riding lessons, and dreamed of owning a big palomino. I wanted
+    to stop and rescue every stray we saw. I wanted to doctor wild animals and hand raise baby birds. As I grew older not much changed. After high school, I worked for the local SPCA for nearly 9 years, and then for a veterinary clinic for another 9 years.
+    I’ve bottle fed everything from kittens to opossums, and I’m pretty sure I’d have a complete menagerie if it weren’t for the logical, levelheadedness of my husband who is always there to remind me that we do not in fact “need” another pet. You know
+    that meme out there that says something like: “One day my kid is going to ask me for another puppy and I’m going to say ‘yes’, and then we will have 76 dogs.”? Yeah. That could be me, if not for my husband. God knew what he was doing when He put him
+    in my life.
+  </p>
+
+  <p class="paragraphSix"> I’m passionate about life. I love people. I love to cook – I’m more of a chef than a baker, but really, anything in the kitchen is just so fun for me. Especially if I can cook it in cast iron. I get great joy from cooking in cast iron, and pretty much
+    anything I can cook from scratch with ingredients from our garden is at the top of my list! (I think there is still a part of me that dreams I’m on a prairie with Laura Ingalls; and from that is derived my dream of living in a genuine old farmhouse.)
+  </p>
+
+  <p class="paragraphSeven"> I cannot wait to begin sharing my ramblings with ya’ll (also I think ya’ll is a great word, it should totally be used more often). I don’t know exactly where this blog is headed, but starting it has been on my mind for a long while now, and it’s time
+    to get it on paper (er, online?). Sometimes I’ll be talking about life – being a wife, a mother, my pets, my farmhouse dreams, recipes and cooking tips, other times it may be things that God puts on my heart. What I don’t want to do is portray myself
+    as someone who is perfect and has everything “together”, because I’m not, and I don’t. But, I do want to be real, and I want a way to connect and share life with others! So, if you’re in, sign up here and never miss a thing and we will see together
+    where this takes us!
+  </p>
+
+  <p class="paragraphEight"> Love, Lis’</p>
+
+</body>
+
+</html>
