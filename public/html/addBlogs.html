@@ -65,14 +65,15 @@
     <textarea class="form-control" ng-model="main.singleBlog.textBody" rows="20" cols="150"></textarea>
     <h2>Date:</h2>
     <input class="form-control" placeholder="Date" ng-model="main.singleBlog.date" type="text">
-    <!-- <h2>Category:</h2>
+    <h2>Category:</h2>
     <select class="form-control" ng-model="main.newBlog.category" ng-options="x for x in main.category">
       <option value="" disable selected>-CHOOSE YOUR CATEGORY FOOL-</option>
-    </select> -->
+    </select>
     <button style="margin: 10%" type="submit" name="button" class="btn btn-mg btn-primary" ng-click="main.showThatEdit()">Submit</button>
     <button style="margin: 10%" type="submit" name="button" class="btn btn-mg btn-danger" ng-click="main.showThatEdit()">Close</button>
   </form>
 
+  <script type="text/javascript" src="../js/dirPagination.js"></script>
   <script type="text/javascript" src="../js/module.js"></script>
   <script type="text/javascript" src="../js/myScripts.js"></script>
   <script type="text/javascript" src="../js/lisaFactory.js"></script>
