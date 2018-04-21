@@ -48,8 +48,8 @@
   <img class="logo" src="../css/resources/PeachFlower.png" alt="Dreaming of a Farmhome" />
   <!-- <img class="seperate" src="../css/resources/barThree.png" alt="This is a bar"> -->
   <!-- <h1>{{ main.greeting }}</h1> -->
-  <div class="mainPageBlogs">
-    <ul class="blogList" dir-paginate="blogs in main.newBlogs | orderBy: 'date': false| itemsPerPage: 5">
+  <div class="mainPageBlogs ng-cloak">
+    <ul class="blogList" dir-paginate="blogs in main.newBlogs | orderBy: 'date': true| itemsPerPage: 5">
       <li class="blogTitle">{{ blogs.name }}</li>
       <li class="blogDesc">{{ blogs.description }}</li>
       <li><img class="blogImage" ng-src="{{ blogs.image }}" /></li>
