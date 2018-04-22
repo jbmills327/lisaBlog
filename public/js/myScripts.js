@@ -112,3 +112,13 @@ function closeNav() {
 }
 
 // End the slide menu jquery
+
+// This should allow for page breaks in the text area
+// This is not ready yet
+// var txtBox = $('#myTextArea');
+// txtBox.keydown(function(e) {
+//   var that = this;
+//   setTimeout(function() {
+//     $(".blogBody").html(that.value.replace(/\n/g, "<br/>"));
+//   }, 10);
+// });

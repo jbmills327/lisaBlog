@@ -44,7 +44,6 @@ body {
   animation: hide 10s ease-in forwards;
 }
 
-
 /*h1 {
   position: absolute;
   top: 50%;
@@ -110,9 +109,7 @@ body {
   color: black
 }
 
-
 /*This is to style the slide menu*/
-
 
 /*Style the hamburger button that open side slide menu*/
 
@@ -131,7 +128,6 @@ body {
   z-index: 1;
   animation: show 15s ease-in forwards;
 }
-
 
 /*This is the hamburger menu for the about me page*/
 
@@ -166,14 +162,12 @@ body {
   }
 }
 
-
 /*Turns hamburger white and background black when hover*/
 
 .openMenu:hover {
   color: white;
   background-color: black;
 }
-
 
 /* The side navigation menu */
 
@@ -200,7 +194,6 @@ body {
   /* 0.5 second transition effect to slide in the sidenav */
 }
 
-
 /* The navigation menu links */
 
 .sidenav a {
@@ -213,7 +206,6 @@ body {
   transition: 0.3s
 }
 
-
 /* When you mouse over the navigation links, change their color */
 
 .sidenav a:hover, .offcanvas a:focus {
@@ -221,7 +213,6 @@ body {
   /*color: #818181;*/
   color: black;
 }
-
 
 /* Position and style the close button (top right corner) */
 
@@ -232,7 +223,6 @@ body {
   font-size: 36px;
   margin-left: 50px;
 }
-
 
 /*This is for the form on the add blog page*/
 
@@ -245,7 +235,6 @@ body {
   margin-bottom: 10%;
   padding-bottom: 10%;
 }
-
 
 /*Styling the blogs on the main page*/
 
@@ -328,7 +317,6 @@ body {
   left: 5%;
 }
 
-
 /*This is all for the about me page*/
 
 p {
@@ -382,7 +370,6 @@ p {
   margin-bottom: 10%;
 }
 
-
 /*styling pagination controls*/
 
 .invControlsWrapper {
@@ -398,4 +385,9 @@ p {
   position: absolute;
   left: 50%;
   /*transform: translate(-50%);*/
+}
+
+#mailMe {
+  text-decoration: none;
+  color: magenta;
 }
